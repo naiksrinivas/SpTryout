@@ -25,8 +25,8 @@ import { TrackComponent } from './track/track.component';
     RouterModule.forRoot([
       {path: 'welcome', component: WelcomeComponent},
       {path: 'user', component: AppUserComponent},
-      {path: 'playlists', component: AppPlaylistsComponent},
-      {path: 'track', component: TrackComponent},            
+      {path: 'playlist/:id', component: AppPlaylistsComponent},
+      {path: 'track/:id', component: TrackComponent},            
     ])
   ],
   providers: [SpotifyService],

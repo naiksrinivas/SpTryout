@@ -1,3 +1,7 @@
+<p>
+    <button (click)="loadUserData()">Click to get information</button>
+</p>
+
 <p *ngIf="data.id">
     <br />
     <br/>
@@ -6,6 +10,11 @@
 </p>
 
 
-<p>
-    <button (click)="loadUserData()">Click to get information</button>
-</p>
+
+
+<div *ngIf="data.id">
+    User {{data.id}}
+    <li *ngFor="let playlist of playlistData.items">
+        <a [routerLink]="['/playlist', playlist.id]">{{playlist.name}}</a>
+    </li>
+</div>

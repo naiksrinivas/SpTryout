@@ -19,4 +19,14 @@ export class SpotifyService {
     return this.http.get('http://localhost:3100/auth/playlist?id=' + id);
   }
 
+  getTrackDetails(id: string): Observable<any>{
+    return this.http.get('http://localhost:3100/auth/track?id=' + id);
+  }
+
+  getTrackAudioFeaturesDetails(id: string): Observable<any>{
+    return this.http.get('http://localhost:3100/auth/trackAudioFeatures?id=' + id);
+  }
+  
+
+
 }

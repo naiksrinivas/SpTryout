@@ -1,5 +1,5 @@
 <p>
-    <button (click)="loadPlaylistData()">Click to get information</button>
+    <button (click)="loadPlaylistData(id)">Click to get information</button>
 </p>
 
 <div *ngIf="data.id">
@@ -9,7 +9,7 @@
     </div>
 
     <li *ngFor="let track of data.tracks.items">
-        {{track.track.name}} - {{track.track.artists[0].name}} - {{track.track.album.name}}
+        <a [routerLink]="['/track', track.track.id]">{{track.track.name}}</a> - {{track.track.artists[0].name}} - {{track.track.album.name}}
     </li>
 
 </div>
