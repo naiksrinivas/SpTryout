@@ -1,2 +1,20 @@
 <h1 style="text-align: center">Spotify Mirror - v1</h1>
-<ngbd-tabset-basic></ngbd-tabset-basic>
+
+<p align="right" margin-right="100px"><a href="http://localhost:3100/auth">Login</a></p>
+
+<div>
+    <nav class='navbar navbar-default'>
+        <div class='container-fluid'>
+            <a class='navbar-brand'>{{pageTitle}}</a>
+            <ul class='nav navbar-nav'>
+                <li><a [routerLink]="['/welcome']">Home</a></li>
+                <li><a [routerLink]="['/user']">User</a></li>
+                <li><a [routerLink]="['/playlists']">Playlist</a></li>
+                <li><a [routerLink]="['/track']">Track</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class='container'>
+        <router-outlet></router-outlet>
+    </div>
+ </div>

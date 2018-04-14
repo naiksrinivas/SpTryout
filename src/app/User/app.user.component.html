@@ -1,6 +1,11 @@
-<p>
+<p *ngIf="data.id">
     <br />
     <br/>
     <img src="{{data.images[0].url}}" />
-    This is {{data.id}}
+    <span>This is {{data.id}} </span>   
+</p>
+
+
+<p>
+    <button (click)="loadUserData()">Click to get information</button>
 </p>
