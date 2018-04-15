@@ -1,7 +1,43 @@
-<p>
-  <button (click)="loadTrackData('6NVGAoLnJaooF97t8Kgs78')">Click to get information</button>
-</p>
+<!-- <p>
+  <button (click)="loadTrackData()">Click to get information</button>
+</p> -->
 
-<h1>{{data.name}}</h1>
+<script src="node_modules/chart.js/src/chart.js"></script>
 
-<h3>{{audioFeaturesData.track_href}}</h3>
+<h1 align="center">{{data.name}}</h1>
+
+<br />
+<br />
+<br />
+
+
+<div *ngIf="audioFeaturesData.id">
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [chartType]="radarChartType"
+            [legend]="barChartLegend"
+            ></canvas>
+  </div>
+  </div>
+
+
+
+<br />
+<br />
+<br />
+
+
+<div *ngIf="audioFeaturesData.id">
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"                        
+            [chartType]="barChartType"
+            [legend]="barChartLegend"
+    >
+    </canvas>
+  </div>  
+</div>
+

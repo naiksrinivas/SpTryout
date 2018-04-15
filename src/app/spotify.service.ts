@@ -15,6 +15,10 @@ export class SpotifyService {
     return this.http.get('http://localhost:3100/auth/userinfo');
   }}
 
+  getUserPlaylists(): Observable<any>{{
+    return this.http.get('http://localhost:3100/auth/userPlaylists');
+  }}
+
   getPlaylistDetails(id: string): Observable<any>{
     return this.http.get('http://localhost:3100/auth/playlist?id=' + id);
   }
